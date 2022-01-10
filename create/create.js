@@ -20,7 +20,7 @@ form.addEventListener('submit', async e => {
     // use createBunny to create a bunny with this name and family id
     await createBunny({
         name: name,
-        family: family
+        family_id: family
 
     });
     
