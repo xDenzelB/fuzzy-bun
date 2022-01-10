@@ -30,15 +30,22 @@ form.addEventListener('submit', async e => {
 window.addEventListener('load', async() => {
     // let's dynamically fill in the families dropdown from supabase
     // grab the select HTML element from the DOM
+    const selectEl = document.createElement('select');
+    const families = await getFamilies();
 
     // go get the families from supabase
-
+    for (let family of families) {
+        const option = document.createElement('option');
+    
     // for each family
 
     // create an option tag
 
     // set the option's value and text content
-
+        option.value = family.id;
+        option.textContent = family.name;
+        selectEl.append(option);
+    }
     // and append the option to the select
 });
 
