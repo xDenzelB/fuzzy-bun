@@ -7,11 +7,15 @@ const test = QUnit.test;
 test('Should display new bunny', (expect) => {
     //Arrange
     // Set up your arguments and expectations
-    const expected = '';
+    const bunny = {
+        name: 'Buggs'
+        
+    };
+    const expected = 'Buggs';
     
     //Act 
     // Call the function you're testing and set the result to a const
-    const actual = renderBunny('bunny');
+    const actual = renderBunny(bunny);
 
     //Expect
     // Make assertions about what is expected versus the actual result
